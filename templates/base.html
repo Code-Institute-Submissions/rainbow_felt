@@ -1,0 +1,52 @@
+<!-- Load static files -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Felt Designs</title>
+
+    <!-- 3rd party CSS and Javascript files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- My CSS and Javascript files -->
+    <link rel="stylesheet" href="{% static "css/rainbow.css" %}">
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/"><img id="rainbowlogo" src="{% static "images/rainbow.png" %}" alt="Rainbow Logo" /></a>
+            </div>
+
+            <!-- Menu -->
+        <ul class="nav nav-pills navbar-right">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Custom Orders</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+        </div>
+
+
+    </nav>
+
+    <!-- Place to plugin other HTML pages -->
+    <section id="main_container" class="container">
+        {% block content %}
+        {% endblock %}
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Temp footer</p>
+    </footer>
+
+</body>
+</html>

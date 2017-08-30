@@ -1,0 +1,24 @@
+/* Base Page */
+#main_container {
+    margin-top: 70px;
+}
+
+.nav > li > a {
+    padding: 22px 15px;
+}
+
+.navbar {
+    border-bottom: 1px solid black;
+}
+
+.navbar, .nav-pills, .nav > li, .nav > li > a, #rainbowlogo {
+    height: 70px;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+#rainbowlogo {
+    padding: 5px 0px;
+}
