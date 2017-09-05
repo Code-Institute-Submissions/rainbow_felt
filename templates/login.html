@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load bootstrap_tags %}
+{% block content %}
+
+<article class="container form-container">
+
+    <!-- Login form -->
+    <form role="form" method="post" action="{% url 'login' %}">
+        <legend>Login to your account</legend>
+        {% csrf_token %}
+        {{ form|as_bootstrap }}
+        <div class="form-group">
+            <input class="btn btn-primary" name="commit" type="submit">
+        </div>
+    </form>
+
+</article>
+
+{% endblock %}

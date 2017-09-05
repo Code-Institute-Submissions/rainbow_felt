@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/1045a7835e.js"></script>
 
     <!-- My CSS and Javascript files -->
     <link rel="stylesheet" href="{% static "css/rainbow.css" %}">
@@ -30,6 +31,13 @@
                 <li><a href="#">Products</a></li>
                 <li><a href="#">Custom Orders</a></li>
                 <li><a href="/about/">About</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="/myaccount/">Account</a></li>
+                <li><a href="/logout/">Log Out</a></li>
+                {% else %}
+                <li><a href="/register/">Register</a></li>
+                <li><a href="/login/">Login</a></li>
+                {% endif %}
                 <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
             </ul>
         </div>
@@ -43,9 +51,9 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <a class="footer-links" href="#"><img src="{% static "images/facebook.png" %}"/> Facebook</a>
-        <a class="footer-links" href="#"><img src="{% static "images/twitter.png" %}"/> Twitter</a>
+    <footer class="footer navbar-fixed-bottom">
+        <a class="footer-links" href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a>
+        <a class="footer-links" href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
     </footer>
 
 </body>

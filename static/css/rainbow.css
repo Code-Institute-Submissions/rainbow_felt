@@ -13,56 +13,7 @@ body {
     background-repeat: no-repeat;
 }
 
-footer {
-    border-top: 1px solid black;
-    padding: 15px;
-    text-align: right;
-}
-
-footer, .navbar {
-    font-weight: bold;
-}
-
-.footer-links {
-    padding-left: 25px;
-}
-
-.footer-links > img {
-    height: 30px;
-}
-
-#main_container {
-    margin-top: 70px;
-    border: solid black;
-    border-width: 0px 1px;
-    padding: 0px;
-}
-
-#main_container, .navbar, footer {
-    background-color: ghostwhite;
-}
-
-.nav > li > a {
-    padding: 22px 15px;
-}
-
-.navbar {
-    border-bottom: 1px solid black;
-}
-
-.navbar, .nav-pills, .nav > li, .nav > li > a, #rainbowlogo {
-    height: 70px;
-}
-
-.navbar-brand {
-    padding: 0;
-}
-
-#rainbowlogo {
-    padding: 5px 0px;
-}
-
-/* Home Page */
+/* Bar placed on top of image carousel */
 .carousel-content {
 	position: absolute;
 	bottom: 20%;
@@ -81,9 +32,43 @@ footer, .navbar {
     height: 600px;
 }
 
+.form-container {
+    padding: 50px;
+}
+
+/* Footer CSS */
+footer {
+    border-top: 1px solid black;
+    padding: 15px;
+    text-align: right;
+}
+
+footer, .navbar {
+    font-weight: bold;
+}
+
+.footer-links {
+    padding-left: 25px;
+}
+
+.footer-links > img {
+    height: 30px;
+}
+
 #homeCarousel {
     margin: 20px;
     border: 1px solid black;
+}
+
+#main_container {
+    margin-top: 70px;
+    border: solid black;
+    border-width: 0px 1px;
+    padding: 0px;
+}
+
+#main_container, .navbar, footer {
+    background-color: ghostwhite;
 }
 
 .messageBar {
@@ -94,6 +79,23 @@ footer, .navbar {
     /* Fix issue with overlap */
     width: 99.99999999%;
     min-height: 150px;
+}
+
+/* Navigation CSS */
+.nav > li > a {
+    padding: 22px 15px;
+}
+
+.navbar {
+    border-bottom: 1px solid black;
+}
+
+.navbar, .nav-pills, .nav > li, .nav > li > a, #rainbowlogo {
+    height: 70px;
+}
+
+.navbar-brand {
+    padding: 0;
 }
 
 /* Use flexbox to center text in divs */
@@ -115,4 +117,8 @@ footer, .navbar {
 .okglyph {
     font-size: 22px;
     margin-right: 10px;
+}
+
+#rainbowlogo {
+    padding: 5px 0px;
 }
