@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<article>
+
+    <!-- Product image -->
+    <figure class="col-md-6">
+        <img id="viewed-product-image" src="{{ viewed_product.image.url }}" alt="Product">
+    </figure>
+
+    <!-- Product description -->
+    <div class="col-md-6">
+        <h2>{{ viewed_product.name }}</h2>
+        <p>{{ viewed_product.description }}</p>
+        <p id="viewed-product-price">£{{ viewed_product.price }}</p>
+        <div id="viewed-product-buttons" class="container">
+            <button role="button" class="btn btn-success">Add to Cart <span class="glyphicon glyphicon-shopping-cart"/></button>
+            <button role="button" onclick="location.href='{% url 'all_products' %}'" class="btn btn-info">Back to products</button>
+        </div>
+    </div>
+
+</article>
+
+{% endblock %}

@@ -31,5 +31,6 @@ urlpatterns = [
     url(r'^myaccount/', account_views.myaccount, name='myaccount'),
 
     # Product URLS
-    url(r'^products/', product_views.all_products, name='all_products'),
+    url(r'^products/$', product_views.all_products, name='all_products'),
+    url(r'^products/(?P<id>\d+)/$', product_views.product_view, name='product_view'),
 ]
