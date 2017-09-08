@@ -23,23 +23,32 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="/"><img id="rainbow-logo" src="{% static "images/rainbow.png" %}" alt="Rainbow Logo" /></a>
+
+                <!-- Collapsable menu for mobile devices -->
+                <button type="button" id="rainbow-nav-button" class="navbar-toggle" data-toggle="collapse" data-target="#rainbow-nav">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
 
             <!-- Menu -->
-            <ul class="nav nav-pills navbar-right">
-                <li><a href="/">Home</a></li>
-                <li><a href="/products/">Products</a></li>
-                <li><a href="#">Custom Orders</a></li>
-                <li><a href="/about/">About</a></li>
-                {% if user.is_authenticated %}
-                <li><a href="/myaccount/">Account</a></li>
-                <li><a href="/logout/">Log Out</a></li>
-                {% else %}
-                <li><a href="/register/">Register</a></li>
-                <li><a href="/login/">Login</a></li>
-                {% endif %}
-                <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-            </ul>
+            <div class="collapse navbar-collapse" id="rainbow-nav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products/">Products</a></li>
+                    <li><a href="#">Custom Orders</a></li>
+                    <li><a href="/about/">About</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="/myaccount/">Account <span class="glyphicon glyphicon-user"></span></a></li>
+                    <li><a href="/logout/">Log Out <span class="glyphicon glyphicon-log-out"></span></a></li>
+                    {% else %}
+                    <li><a href="/register/">Register <span class="glyphicon glyphicon-user"></span></a></li>
+                    <li><a href="/login/">Login <span class="glyphicon glyphicon-log-in"></span></a></li>
+                    {% endif %}
+                    <li><a href="#">Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                </ul>
+            </div>
         </div>
 
     </nav>
@@ -49,6 +58,8 @@
         {% block content %}
         {% endblock %}
     </section>
+
+    <div id="footer-spacing"></div>
 
     <!-- Footer -->
     <footer class="footer navbar-fixed-bottom">
