@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<article id="product-display">
+    
+    <!-- Create displays for each product -->
+    {% for product in products %}
+    <a href="{{ product.id }}" class="container col-md-4 product-columns">
+        <div class="product-boxes">
+            <figure class="product-image">
+                <img src="{{ product.image.url }}">
+            </figure>
+            <div class="product-text">
+                <p class="product-name">{{ product.name }}</p>
+                <p class="product-price">£{{ product.price }}</p>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+
+</article>
+
+{% endblock %}

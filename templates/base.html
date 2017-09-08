@@ -22,13 +22,13 @@
     <nav class="navbar navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/"><img id="rainbowlogo" src="{% static "images/rainbow.png" %}" alt="Rainbow Logo" /></a>
+                <a class="navbar-brand" href="/"><img id="rainbow-logo" src="{% static "images/rainbow.png" %}" alt="Rainbow Logo" /></a>
             </div>
 
             <!-- Menu -->
             <ul class="nav nav-pills navbar-right">
                 <li><a href="/">Home</a></li>
-                <li><a href="#">Products</a></li>
+                <li><a href="/products/">Products</a></li>
                 <li><a href="#">Custom Orders</a></li>
                 <li><a href="/about/">About</a></li>
                 {% if user.is_authenticated %}
@@ -52,8 +52,8 @@
 
     <!-- Footer -->
     <footer class="footer navbar-fixed-bottom">
-        <a class="footer-links" href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a>
-        <a class="footer-links" href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
+        <a class="footer-links" href="https://www.facebook.com/Rainbow-Felt-Designs-125765944724454/"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a>
+        <a class="footer-links" href="https://www.instagram.com/rainbowfeltdesigns_/"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
     </footer>
 
 </body>

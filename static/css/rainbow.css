@@ -36,6 +36,10 @@ body {
     padding: 50px;
 }
 
+.fa {
+    font-size: 18px;
+}
+
 /* Footer CSS */
 footer {
     border-top: 1px solid black;
@@ -90,7 +94,7 @@ footer, .navbar {
     border-bottom: 1px solid black;
 }
 
-.navbar, .nav-pills, .nav > li, .nav > li > a, #rainbowlogo {
+.navbar, .nav-pills, .nav > li, .nav > li > a, #rainbow-logo {
     height: 70px;
 }
 
@@ -119,6 +123,48 @@ footer, .navbar {
     margin-right: 10px;
 }
 
-#rainbowlogo {
-    padding: 5px 0px;
+/* CSS for product boxes */
+.product-boxes {
+    display: inline-block;
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px #888888;
+}
+
+.product-columns {
+    padding: 10px 8px;
+}
+
+#product-display {
+    padding: 10px 20px;
+}
+
+.product-image {
+    border-bottom: 1px solid black;
+}
+
+.product-image > img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.product-name {
+    text-align: left;
+}
+
+.product-price {
+    display: inline-block;
+    text-align: right;
+}
+
+.product-text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    color: black;
+    padding: 7px 8px 0 8px;
+}
+
+#rainbow-logo {
+    padding: 5px 0;
 }
