@@ -5,7 +5,7 @@
     
     <!-- Create displays for each product -->
     {% for product in products %}
-    <a href="{{ product.id }}" class="container col-md-4 product-columns">
+    <a href="{{ product.id }}" class="container col-sm-6 col-md-4 product-columns">
         <div class="product-boxes">
             <figure class="product-image viewed-product-image">
                 <img src="{{ product.image.url }}">
