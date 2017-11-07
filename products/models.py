@@ -8,3 +8,8 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(upload_to='static/product_images/', default='static/product_images/bracelet1.jpg')
+
+
+class Custom(models.Model):
+	email = models.EmailField(max_length=254)
+	custom_description = models.TextField()

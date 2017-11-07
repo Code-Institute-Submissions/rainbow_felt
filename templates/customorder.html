@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load bootstrap_tags %}
+{% load static %}
+{% block content %}
+
+<article class="container">
+
+    <figure>
+    	<img id="rooster" src="{% static "images/rooster.jpg" %}" alt="Rooster"/>
+    </figure>
+
+    <div id="custom-request">
+    <form role="form" method="post" action="{% url 'custom_request' %}">
+	    <div id="request" class="container">
+	  		<legend>Not found what you're looking for? Request a custom item!</legend>
+	  		{{ form|as_bootstrap }}
+	        {% csrf_token %}
+	  		<div class="form-group">
+	  			<input class="btn btn-primary" name="commit" type="submit">
+	  		</div>
+	  	</div>
+  	</form>
+  	</div>
+
+</article>
+
+{% endblock %}
