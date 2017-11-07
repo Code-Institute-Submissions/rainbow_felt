@@ -221,7 +221,7 @@ footer, .navbar {
     justify-content: center;
 }
 
-#viewed-product-buttons > button {
+#viewed-product-buttons > a {
     margin: 0 10px;
 }
 

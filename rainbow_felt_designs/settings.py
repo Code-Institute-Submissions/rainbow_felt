@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'accounts',
     'products',
     'home',
+    'carton',
+    'shopping',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +132,5 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_URL = '/'
+
+CART_PRODUCT_MODEL = 'products.models.Product'

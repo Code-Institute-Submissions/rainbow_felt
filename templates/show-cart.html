@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load carton_tags %}
+{% get_cart as cart %}
+
+<article class="container">
+	<!-- Display cart items in table -->
+	<br>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Product</th>
+				<th>Quantity</th>
+				<th>Price</th>
+				<th>Remove Item</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<!-- Create table entry for each item in cart -->
+			{% for item in cart.items %}
+			<tr>
+				<td>{{ item.product.name }}</td>
+				<td>{{ item.quantity }}</td>
+				<td>£{{ item.subtotal }}</td>
+				<td><a href="/shopping-cart/remove/?id={{ item.product.id }}"><span class="glyphicon glyphicon-remove"></span></a></td>
+			</tr>
+			{% endfor %}
+
+			<!-- Total cost displayed in last row -->
+			<tr>
+				<td></td>
+				<td></td>
+				<td><strong>Total Cost</strong></td>
+				<td>£{{ cart.total }}</td>
+			</tr>
+
+		</tbody>
+	</table>
+</article>
+
+
+{% endblock %}
