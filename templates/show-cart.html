@@ -5,8 +5,20 @@
 {% get_cart as cart %}
 
 <article class="container">
-	<!-- Display cart items in table -->
 	<br>
+
+	<!-- Display messages if there are any, i.e. if product added to basket -->
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert itemerror">
+        <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>{{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+
+
+	<!-- Display cart items in table -->
+	{% if cart.items %}
 	<table class="table table-striped">
 		<thead>
 			<tr>
@@ -38,6 +50,20 @@
 
 		</tbody>
 	</table>
+
+	<!-- Create payment button for cart. Use .render for commercial -->
+	<div id="paypal-button">
+		<a>{{ cart.paypal_form.sandbox }}</a>
+	</div>
+
+	<!-- Display message if no items are in cart -->
+	{% else %}
+	<div id="go-shopping">
+		<h4>You have no items in your cart.</h4>
+		<a href="{% url 'all_products' %}" class="btn btn-info">Click to go shopping!</a>
+	</div>
+	{% endif %}
+
 </article>
 
 

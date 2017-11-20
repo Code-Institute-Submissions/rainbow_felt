@@ -1,9 +1,12 @@
 from decimal import Decimal
+import uuid
 
 from django.conf import settings
 
 from carton import module_loading
 from carton import settings as carton_settings
+
+from paypal.standard.forms import PayPalPaymentsForm
 
 
 class CartItem(object):
@@ -205,3 +208,21 @@ class Cart(object):
         The total value of all items in the cart.
         """
         return sum([item.subtotal for item in self.items])
+
+    @property
+    def paypal_form(self):
+        paypal_dict = {
+            "business": settings.PAYPAL_RECEIVER_EMAIL,
+            "amount": self.total,
+            "currency_code": "GBP",
+            "item_name": "Rainbow Felt Designs",
+            "invoice": "%s" % uuid.uuid4(),
+            "notify_url": settings.PAYPAL_NOTIFY_URL,
+            "return_url": "%s/paypal-return" % settings.SITE_URL,
+            "cancel_return": "%s/paypal-cancel" % settings.SITE_URL
+        }
+
+        return PayPalPaymentsForm(initial=paypal_dict)
+
+    def __unicode__(self):
+        return self.name

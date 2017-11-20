@@ -12,22 +12,21 @@ This website is made to allow users to browse through and purchase crafted produ
 
 ### How does it work
 
-This website uses **Django** as a base framework for site. The site is styled with **Bootstrap**. My **CSS** has been split by page to make it more readable for myself, this includes @media.
+This website uses **Django** as a base framework for site. The site is styled with **Bootstrap**.
 
 ## Features
 
 ### Existing Features
-- None
-
-### Features Left to Implement
 - Eye catching home page with image carousel
 - Products page to browse through all available products
 - Ability to view separate pages of products to see description and pictures
 - Ability to register an account, login and log off
 - Page to request custom products
 - Ability to add products to cart
-- Pay for cart contents using paypal
 - About page describing the store
+
+### Features Left to Implement
+- Pay for cart contents using paypal
 - Create flatpages to add products to the site
 
 ## Tech Used
@@ -35,8 +34,16 @@ This website uses **Django** as a base framework for site. The site is styled wi
 ### Some the tech used includes:
 - [Bootstrap](http://getbootstrap.com/)
     - Used to give my project a simple, responsive layout
+- [jQuery](https://jquery.com)
+	- Need for Bootstrap functionality
 - [Django](https://www.djangoproject.com)
     - Used as base framework for the site
+- [Django Carton](https://github.com/lazybird/django-carton)
+	- Used as a base to create shopping cart for the site
+- [Django Forms Bootstrap](https://github.com/pinax/django-forms-bootstrap)
+	- Used to create Bootstrap stylized forms with ease in Django
+- [Font Awesome](http://fontawesome.io)
+	- Used for some of the icons on the site
 
 ## Testing
 - None yet

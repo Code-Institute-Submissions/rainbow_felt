@@ -19,6 +19,8 @@ from home import views
 from accounts import views as account_views
 from products import views as product_views
 from shopping import views as shopping_views
+from paypal_store import views as paypal_views
+from paypal.standard.ipn import urls as paypal_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -40,4 +42,9 @@ urlpatterns = [
     url(r'^shopping-cart/add/$', shopping_views.add, name='shopping-cart-add'),
     url(r'^shopping-cart/remove/$', shopping_views.remove, name='shopping-cart-remove'),
     url(r'^shopping-cart/show/$', shopping_views.show, name='shopping-cart-show'),
+
+    # Paypal URLS
+    url(r'^temp-complicated-url/', include(paypal_urls)),
+    url(r'^paypal-return', paypal_views.paypal_return),
+    url(r'^paypal-cancel', paypal_views.paypal_cancel),
 ]

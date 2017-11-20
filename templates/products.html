@@ -3,6 +3,15 @@
 
 <article id="product-display">
     
+    <!-- Display messages if there are any, i.e. if product added to basket -->
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert itemsuccess">
+        <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>{{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+
     <!-- Create displays for each product -->
     {% for product in products %}
     <a href="{{ product.id }}" class="container col-sm-6 col-md-4 product-columns">

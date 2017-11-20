@@ -78,18 +78,42 @@ footer, .navbar {
     height: 30px;
 }
 
-#footer-spacing {
-    height: 50px;
+#go-shopping, #paypal-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #home-carousel {
     margin: 20px;
 }
 
+.itemsuccess, .itemerror {
+    padding: 15px;
+    color: white; 
+}
+
+.itemsuccess {
+    background-color: #5cb85c;
+}
+
+.itemerror {
+    background-color: #e53e32;
+}
+
+.itemsuccess > .close, .itemerror > .close {
+    color: white;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.itemsuccess > .close:hover, .itemerror > .close:hover {
+    color: black;
+}
+
 #main-container {
-    margin-top: 70px;
     border-width: 0px 1px;
-    padding: 0px;
+    padding: 70px 0 50px 0;
     min-height: 100%;
     min-height: -webkit-fill-available;
     min-height: -moz-available;
@@ -112,6 +136,10 @@ footer, .navbar {
 /* Navigation CSS */
 .nav > li > a {
     padding: 22px 15px;
+}
+
+.nav > li > a, .footer-links {
+    color: #e22499;
 }
 
 .navbar {
@@ -197,17 +225,27 @@ footer, .navbar {
 
 #rainbow-nav-button {
     margin-top: 15px;
-    border: 2px solid rgba(237, 13, 40, 0.7);
+    border: 2px solid #e22499;
 }
 
 #rainbow-nav-button > span {
-    background-color: rgba(237, 13, 40, 0.7);
+    background-color: #e22499;
 }
 
 #rooster {
     width: 40%;
     float: right;
     margin: 15px 15px 15px 0;
+}
+
+@media (max-width: 768px) {
+    #request {
+        width: 100%;
+    }
+
+    #rooster {
+        display: none;
+    }
 }
 
 #viewed-product-image {

@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'home',
     'carton',
     'shopping',
+    'paypal.standard.ipn',
+    'paypal_store'
 ]
 
 MIDDLEWARE = [
@@ -134,3 +136,8 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/'
 
 CART_PRODUCT_MODEL = 'products.models.Product'
+
+# PayPal Settings
+SITE_URL = 'http://127.0.0.1:8000'
+PAYPAL_NOTIFY_URL = 'http://127.0.0.1/temp-complicated-url/'
+PAYPAL_RECEIVER_EMAIL = 'futoisaru-facilitator@gmail.com'
