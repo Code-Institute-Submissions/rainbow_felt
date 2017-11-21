@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>Thanks for buying my item :)</h1>
- 
-    <h2>POST</h2>
-    {{ post }}
- 
-    <h2>GET</h2>
-    {{ get }}
+
+    <article>
+        <div id="thank-you">
+            <h4>Thank you for your purchase! We hope you will enjoy your items.</h4>
+            <a href="{% url 'home' %}" class="btn btn-info">Return to homepage</a>
+        </div>
+    </article>
+
 {% endblock %}

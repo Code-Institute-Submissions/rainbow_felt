@@ -78,7 +78,7 @@ footer, .navbar {
     height: 30px;
 }
 
-#go-shopping, #paypal-button {
+#go-shopping, #paypal-button, #thank-you {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -246,6 +246,10 @@ footer, .navbar {
     #rooster {
         display: none;
     }
+}
+
+#thank-you {
+    margin: 15px 0;
 }
 
 #viewed-product-image {

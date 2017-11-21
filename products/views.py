@@ -1,5 +1,6 @@
 # Imports
-from django.shortcuts import render, get_object_or_404
+import uuid
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Product, Custom
 from .forms import CustomProductForm
 from django.contrib import auth, messages
@@ -22,20 +23,17 @@ def product_view(request, id):
 def custom_request(request):
 	if request.method == "POST":
 		form = CustomProductForm(request.POST)
+		
         # Check form is valid then save details
 		if form.is_valid():
 			custom = form.save()
-			custom = auth.authenticate(email=request.POST.get('email'), custom_description=request.POST.get('custom_description'))
+			messages.success(request, "You have successfully submitted your request.")
+			return redirect('all_products')
 
-	        # If submitted correctly then show successful msg
-			if custom:
-				auth.login(request, user)
-				messages.success(request, "You have successfully submitted your request.")
-				return redirect(reverse('myaccount'))
-
-	        # If details incorrect show error msg
-			else:
-				messages.error(request, "We have been unable to submit your request at this time.")
+	    # If details incorrect show error msg
+		else:
+			messages.error(request, "We have been unable to submit your request at this time.")
+			return redirect('custom_request')
 
 	else:
 		form = CustomProductForm()

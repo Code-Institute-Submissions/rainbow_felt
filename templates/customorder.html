@@ -5,6 +5,15 @@
 
 <article class="container">
 
+	<!-- Display messages if there are any -->
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert itemerror">
+        <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>{{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+
     <figure>
     	<img id="rooster" src="{% static "images/rooster.jpg" %}" alt="Rooster"/>
     </figure>

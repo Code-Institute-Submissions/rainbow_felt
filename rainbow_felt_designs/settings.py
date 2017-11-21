@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'home',
     'carton',
     'shopping',
+    'orders',
     'paypal.standard.ipn',
     'paypal_store'
 ]

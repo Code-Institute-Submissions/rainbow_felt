@@ -24,9 +24,9 @@ This website uses **Django** as a base framework for site. The site is styled wi
 - Page to request custom products
 - Ability to add products to cart
 - About page describing the store
+- Pay for cart contents using paypal
 
 ### Features Left to Implement
-- Pay for cart contents using paypal
 - Create flatpages to add products to the site
 
 ## Tech Used
