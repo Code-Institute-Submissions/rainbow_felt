@@ -11,5 +11,5 @@ class Product(models.Model):
 
 
 class Custom(models.Model):
-	email = models.EmailField(max_length=254)
-	custom_description = models.TextField()
+    email = models.EmailField(max_length=254)
+    custom_description = models.TextField()

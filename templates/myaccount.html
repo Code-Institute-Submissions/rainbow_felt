@@ -2,6 +2,42 @@
 {% load bootstrap_tags %}
 {% block content %}
 
-<p>You are logged in as {{ user.username }}</p>
+    <!-- Display messages if there are any -->
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert itemsuccess">
+        <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>{{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    <article class="container">
+
+        <div id="account-page">
+            <!-- Display users information -->
+            <h4>You are logged in as {{ user.username }}</h4>
+            <p>Email: {{ user.email }}</p>
+
+            <!-- If user has an address, display it -->
+            {% if user.userextras.house %}
+            <p>Delivery Address:<br>{{ user.userextras.house }} {{ user.userextras.street }}<br>{{ user.userextras.city }}<br>{{ user.userextras.postcode }}</p>
+
+            <!-- If user has no address then create form for it -->
+            {% else %}
+
+            <!-- Address form -->
+            <form role="form" method="post" action="{% url 'myaccount' %}">
+                <legend>Add a delivery address to your account</legend>
+                {% csrf_token %}
+                {{ form|as_bootstrap }}
+                <div class="form-group">
+                    <input class="btn btn-primary" name="commit" type="submit">
+                </div>
+            </form>
+
+            {% endif %}
+        </div>
+
+    </article>
 
 {% endblock %}

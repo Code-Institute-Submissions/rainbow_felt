@@ -45,12 +45,6 @@ body {
     max-height: 600px;
 }
 
-#request {
-    width: 55%;
-    float: left;
-    margin: 10px 0;
-}
-
 .form-container {
     padding: 50px;
 }
@@ -78,7 +72,7 @@ footer, .navbar {
     height: 30px;
 }
 
-#go-shopping, #paypal-button, #thank-you {
+#go-shopping, #paypal-button, #thank-you, #go-login, #go-account, #account-page {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -230,6 +224,12 @@ footer, .navbar {
 
 #rainbow-nav-button > span {
     background-color: #e22499;
+}
+
+#request {
+    width: 55%;
+    float: left;
+    margin: 10px 0;
 }
 
 #rooster {

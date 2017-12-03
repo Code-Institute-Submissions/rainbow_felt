@@ -51,10 +51,31 @@
 		</tbody>
 	</table>
 
-	<!-- Create payment button for cart. Use .render for commercial -->
-	<div id="paypal-button">
-		<a>{{ cart.paypal_form.sandbox }}</a>
-	</div>
+        <!-- Check user is logged in
+        {% if user.is_authenticated %}
+
+            <!-- Check user has address associated with their account -->
+            {% if user.userextras.house %}
+                <!-- Create payment button for cart. Change to .render for commercial -->
+                <div id="paypal-button">
+                    <a>{{ cart.paypal_form.sandbox }}</a>
+                </div>
+
+            <!-- If user has no address associated with their account send them to account page -->
+            {% else %}
+                <div id="go-account">
+                    <h4>Please add a delivery address to your account to checkout your cart.</h4>
+                    <a href="{% url 'myaccount' %}" class="btn btn-info">My Account</a>
+                </div>
+            {% endif %}
+
+        <!-- If user not logged in then send them to login page -->
+        {% else %}
+            <div id="go-login">
+                <h4>Please login to checkout your cart.</h4>
+                <a href="{% url 'login' %}" class="btn btn-info">Login</a>
+            </div>
+        {% endif %}
 
 	<!-- Display message if no items are in cart -->
 	{% else %}
