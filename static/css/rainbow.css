@@ -18,6 +18,10 @@
     margin: 0 15px;
 }
 
+.alert {
+    margin: 15px 25px;
+}
+
 /* Create fixed background for site that is in a fixed position */
 body {
     background-image: url("../images/wool.jpg");
@@ -127,6 +131,29 @@ footer, .navbar {
     min-height: 150px;
 }
 
+.modal-body {
+    display: block;
+    padding: 0;
+    background-color: grey;
+}
+
+.modal-header {
+    background-color: #9c9c9c;
+}
+
+.modal-header > .close {
+    opacity: 1;
+    color: ghostwhite;
+}
+
+.modal-header > .close:hover {
+    opacity: 0.6;
+}
+
+.modal-header > p {
+    display: inline;
+}
+
 /* Navigation CSS */
 .nav > li > a {
     padding: 22px 15px;
@@ -194,6 +221,12 @@ footer, .navbar {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+}
+
+#product-modal {
+    margin: 15px;
+    color: ghostwhite;
+    max-width: 1100px;
 }
 
 .product-name {
@@ -337,5 +370,11 @@ footer, .navbar {
     }
     #offer-article > p, .about-article > p {
         margin: 15px;
+    }
+}
+
+@media (max-width: 380px) {
+    .navbar-brand {
+        width: 200px;
     }
 }

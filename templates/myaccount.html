@@ -2,15 +2,6 @@
 {% load bootstrap_tags %}
 {% block content %}
 
-    <!-- Display messages if there are any -->
-    {% if messages %}
-    {% for message in messages %}
-    <div class="alert itemsuccess">
-        <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>{{ message }}
-    </div>
-    {% endfor %}
-    {% endif %}
-
     <article class="container">
 
         <div id="account-page">

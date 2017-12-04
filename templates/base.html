@@ -7,13 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rainbow Felt Designs</title>
 
-    <!-- 3rd party CSS and Javascript files -->
+    <!-- 3rd party CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://use.fontawesome.com/1045a7835e.js"></script>
 
-    <!-- My CSS and Javascript files -->
+    <!-- My CSS -->
     <link rel="stylesheet" href="{% static "css/rainbow.css" %}">
 
 </head>
@@ -53,10 +50,22 @@
 
     </nav>
 
-    <!-- Place to plugin other HTML pages -->
+    <!-- Main container -->
     <section id="main-container" class="container">
+
+        <!-- Display messages if there are any -->
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert itemsuccess js-message">
+                    <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>{{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <!-- Place to plugin other HTML pages -->
         {% block content %}
         {% endblock %}
+
     </section>
 
     <!-- Footer -->
@@ -64,6 +73,18 @@
         <a class="footer-links" href="https://www.facebook.com/Rainbow-Felt-Designs-125765944724454/"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a>
         <a class="footer-links" href="https://www.instagram.com/rainbowfeltdesigns_/"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
     </footer>
+
+    <!-- 3rd party javascript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/1045a7835e.js"></script>
+
+    <!-- My Javascript -->
+    <script src="{% static "js/rainbow.js" %}"></script>
+
+    <!-- For page specific javascript -->
+    {% block javascript %}
+    {% endblock %}
 
 </body>
 </html>

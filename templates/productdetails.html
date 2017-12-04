@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 
 <article>
@@ -19,6 +20,23 @@
         </div>
     </div>
 
+    <!-- Modal for enlarging pictures, hidden by default -->
+    <div class="modal fade" id="product-modal" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p id="modal-caption">{{ viewed_product.name }}</p>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <figure class="modal-body">
+                <img class="img-responsive" src="{{ viewed_product.image.url }}" id="product-enlarge" alt="{{ viewed_product.name }} image">
+            </figure>
+        </div>
+    </div>
+
 </article>
 
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static "js/products.js" %}"></script>
 {% endblock %}
