@@ -14,7 +14,7 @@ PAYPAL_NOTIFY_URL = 'https://rainbow-felt-designs.herokuapp.com/temp-complicated
 PAYPAL_RECEIVER_EMAIL = 'futoisaru-facilitator@gmail.com'
 
 SITE_URL = 'https://rainbow-felt-designs.herokuapp.com/'
-ALLOWED_HOSTS.append('rainbow-felt-designs.herokuapp.com/')
+ALLOWED_HOSTS.append('rainbow-felt-designs.herokuapp.com')
 
 
 # Log DEBUG information to the console
