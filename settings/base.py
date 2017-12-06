@@ -113,6 +113,6 @@ STATICFILES_DIRS = [
     '/static/',
 ]
 
-MEDIA_URL = '/'
+MEDIA_URL = ''
 
 CART_PRODUCT_MODEL = 'products.models.Product'
