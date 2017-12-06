@@ -8,3 +8,4 @@ setuptools == 36.2.7
 wheel == 0.29.0
 django-paypal==0.3.6
 gunicorn==19.4
+whitenoise==3.2
