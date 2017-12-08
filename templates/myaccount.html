@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% load bootstrap_tags %}
 {% block content %}
 
@@ -31,4 +32,8 @@
 
     </article>
 
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static 'js/myaccount.js' %}"></script>
 {% endblock %}

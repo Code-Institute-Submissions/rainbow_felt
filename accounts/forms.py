@@ -18,7 +18,7 @@ class ExtrasForm(forms.ModelForm):
     class Meta:
         model = UserExtras
         exclude = ['user']
-        fields = ['house', 'street', 'city', 'postcode']
+        fields = ['postcode', 'house', 'street', 'city']
 
 
 # Login form
