@@ -6,6 +6,8 @@ from models import UserExtras
 
 # Registration form
 class UserRegistrationForm(UserCreationForm):
+    email = forms.EmailField(max_length=254, required=True)
+
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']

@@ -21,23 +21,23 @@ def product_view(request, id):
 
 
 def custom_request(request):
-	if request.method == "POST":
-		form = CustomProductForm(request.POST)
-		
+    if request.method == "POST":
+        form = CustomProductForm(request.POST)
+
         # Check form is valid then save details
-		if form.is_valid():
-			custom = form.save()
-			messages.success(request, "You have successfully submitted your request.")
-			return redirect('all_products')
+        if form.is_valid():
+            custom = form.save()
+            messages.success(request, "You have successfully submitted your request.")
+            return redirect('all_products')
 
-	    # If details incorrect show error msg
-		else:
-			messages.error(request, "We have been unable to submit your request at this time.")
-			return redirect('custom_request')
+        # If details incorrect show error msg
+        else:
+            messages.error(request, "We have been unable to submit your request at this time.")
+            return redirect('custom_request')
 
-	else:
-		form = CustomProductForm()
+    else:
+        form = CustomProductForm()
 
-	args = {'form': form}
-	args.update(csrf(request))
-	return render(request, 'customorder.html', args)
+    args = {'form': form}
+    args.update(csrf(request))
+    return render(request, 'customorder.html', args)

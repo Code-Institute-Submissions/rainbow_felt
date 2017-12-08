@@ -4,12 +4,14 @@ from __future__ import unicode_literals
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.decorators import login_required
 
 from carton.cart import Cart
 from orders.models import Order
 
 
 # Create your views here.
+@login_required
 @csrf_exempt
 def paypal_return(request):
 
@@ -31,6 +33,7 @@ def paypal_return(request):
 
 
 # Send message to user to confirm cancellation of purchase
+@login_required
 def paypal_cancel(request):	
     messages.success(request, 'You have cancelled your payment.')
     return redirect('shopping-cart-show')
