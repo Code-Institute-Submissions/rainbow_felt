@@ -365,6 +365,10 @@ footer, .navbar {
 }
 
 @media (max-width: 768px) {
+    .about-images {
+        height: auto;
+        width: 100%;
+    }
     #offer-article, .about-article {
         flex-direction: column;
     }
@@ -374,6 +378,9 @@ footer, .navbar {
 }
 
 @media (max-width: 380px) {
+    .carousel-content {
+        font-size: 12px;
+    }
     .navbar-brand {
         width: 200px;
     }
