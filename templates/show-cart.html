@@ -40,9 +40,16 @@
 		</tbody>
 	</table>
 
-        <!-- Check user is logged in
-        {% if user.is_authenticated %}
+        <!-- Check if user not logged in -->
+        {% if not user.is_authenticated %}
 
+            <!-- If user not logged in then send them to login page -->
+            <div id="go-login">
+                <h4>Please login to checkout your cart.</h4>
+                <a href="{% url 'login' %}" class="btn btn-info">Login</a>
+            </div>
+
+        {% else %}
             <!-- Check user has address associated with their account -->
             {% if user.userextras.house %}
                 <!-- Create payment button for cart. Change to .render for commercial -->
@@ -57,21 +64,14 @@
                     <a href="{% url 'myaccount' %}" class="btn btn-info">My Account</a>
                 </div>
             {% endif %}
-
-        <!-- If user not logged in then send them to login page -->
-        {% else %}
-            <div id="go-login">
-                <h4>Please login to checkout your cart.</h4>
-                <a href="{% url 'login' %}" class="btn btn-info">Login</a>
-            </div>
         {% endif %}
 
 	<!-- Display message if no items are in cart -->
 	{% else %}
-	<div id="go-shopping">
-		<h4>You have no items in your cart.</h4>
-		<a href="{% url 'all_products' %}" class="btn btn-info">Click to go shopping!</a>
-	</div>
+        <div id="go-shopping">
+            <h4>You have no items in your cart.</h4>
+            <a href="{% url 'all_products' %}" class="btn btn-info">Click to go shopping!</a>
+        </div>
 	{% endif %}
 
 </article>
