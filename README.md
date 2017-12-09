@@ -43,11 +43,12 @@ been deployed on **Heroku** to be viewed and tested, you can see the site in act
 ## Tech Used
 
 ### Some the tech used includes:
-- **HTML**, **CSS**, **Javascript** and **Python** are base languages for the website
+- **HTML**, **CSS**, **Javascript** and **Python**
+    - Are base languages for the website
 - [Bootstrap](http://getbootstrap.com/)
     - Used to give my project a simple, responsive layout
 - [jQuery](https://jquery.com)
-	- Need for Bootstrap functionality
+	- Need for Bootstrap functionality and most of my javascript code
 - [Django](https://www.djangoproject.com)
     - Used as base framework for the site
 - [MySQL](https://www.mysql.com)
