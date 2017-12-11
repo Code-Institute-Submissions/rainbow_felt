@@ -66,7 +66,9 @@ been deployed on **Heroku** to be viewed and tested, you can see the site in act
     - Used to test my javascript
 - [WhiteNoise](http://whitenoise.evans.io/en/stable/)
     - Used to serve static files once deployed on **Heroku**
-
+- [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/intro)
+    - Used to make postcode/address lookup
+    
 ## Testing
 - Used built in **Django** testing functionality to test my views and forms for my apps
 - Used **Jasmine** to test postcode validation javascript
