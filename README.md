@@ -15,7 +15,8 @@ custom products to be made, view information about all products and business.
 ### How does it work
 
 This website uses **Django** as a base framework for site and for handling of databases. The site is styled with
-**Bootstrap**, mainly used for Nav-Bar, creating columns and making forms with the use of **Django forms bootstrap**.
+**Bootstrap**, mainly used for Nav-Bar, creating columns and making forms with the use of **Django forms bootstrap**. 
+Small section of **CSS** code for collapsing navbar is from StackOverflow, see credits section for details.
 **Javascript/JQuery** has been used to improve the UX by improving responsiveness through **AJAX**, e.g. resize main
 container of site to fit users browser and to allow users to lookup to their postcode to make address input easier.
 **Django Carton** has been used to add shopping cart functionality to website, I've altered some of the code to add the
@@ -51,7 +52,7 @@ been deployed on **Heroku** to be viewed and tested, you can see the site in act
 	- Need for Bootstrap functionality and most of my javascript code
 - [Django](https://www.djangoproject.com)
     - Used as base framework for the site
-- [MySQL](https://www.mysql.com)
+- [SQLite](https://www.sqlite.org)
     - Using **Django's** inbuilt functionality to create and modify database
 - [Django Carton](https://github.com/lazybird/django-carton)
 	- Used as a base to create shopping cart for the site
@@ -90,9 +91,10 @@ been deployed on **Heroku** to be viewed and tested, you can see the site in act
 5. Activate your virtual environment using ```rainbow\scripts\activate```
 6. Make sure you are in project root directory and use ```pip install -r requirements\dev.txt``` to install requirements
 7. Now you can run the project using ```python manage.py runserver```
-8. The project will now run on [localhost](http://127.0.0.1:8080)
+8. The project will now run on [localhost](http://127.0.0.1:8000)
 9. Make changes to the code and if you think it belongs in here then just submit a pull request
 
 ## Credits
 - A lot of images used were from [Pixabay](https://pixabay.com)
 - Some images from [Etsy](https://www.etsy.com/uk/)
+- Section of CSS for collapsing navbar menu was by user ZimSystem from [StackOverflow](https://stackoverflow.com/a/36289507)

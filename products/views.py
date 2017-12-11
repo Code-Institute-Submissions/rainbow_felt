@@ -20,13 +20,14 @@ def product_view(request, id):
     return render(request, 'productdetails.html', {'viewed_product': viewed_product})
 
 
+# Custom product request page
 def custom_request(request):
     if request.method == "POST":
         form = CustomProductForm(request.POST)
 
         # Check form is valid then save details
         if form.is_valid():
-            custom = form.save()
+            form.save()
             messages.success(request, "You have successfully submitted your request.")
             return redirect('all_products')
 

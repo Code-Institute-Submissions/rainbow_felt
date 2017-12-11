@@ -76,7 +76,8 @@ footer, .navbar {
     height: 30px;
 }
 
-#go-shopping, #paypal-button, #thank-you, #go-login, #go-account, #account-page {
+/* Create flex box and center everything */
+#go-shopping, #paypal-button, #thank-you, #go-login, #go-account, #account-page, #go-home {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -271,16 +272,6 @@ footer, .navbar {
     margin: 15px 15px 15px 0;
 }
 
-@media (max-width: 768px) {
-    #request {
-        width: 100%;
-    }
-
-    #rooster {
-        display: none;
-    }
-}
-
 #thank-you {
     margin: 15px 0;
 }
@@ -306,6 +297,8 @@ footer, .navbar {
     font-size: 19px;
 }
 
+/* Media CSS to make website responsive */
+
 @media (max-width: 1200px) {
     .navbar-brand {
         width: 300px;
@@ -317,51 +310,64 @@ footer, .navbar {
     }
 }
 
-@media (min-width: 768px) {
-    #offer-image {
-        width: 400px;
-        margin-right: 20px;
-    }
-}
-
 /* Collapse menu at 992px rather than 768px */
+/* This code is from stackoverflow, see README */
 @media (max-width: 992px) {
     .navbar-header {
         float: none;
     }
-    .navbar-left,.navbar-right {
+
+    .navbar-left, .navbar-right {
         float: none !important;
     }
+
     .navbar-toggle {
         display: block;
     }
+
     .navbar-collapse {
         border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
+
     .navbar-fixed-top {
         top: 0;
         border-width: 0 0 1px;
     }
+
     .navbar-collapse.collapse {
-        display: none!important;
+        display: none !important;
     }
+
     .navbar-nav {
-        float: none!important;
+        float: none !important;
         margin-top: 7.5px;
     }
-    .navbar-nav>li {
+
+    .navbar-nav > li {
         float: none;
     }
-    .navbar-nav>li>a {
+
+    .navbar-nav > li > a {
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    .collapse.in{
-        display:block !important;
+
+    .collapse.in {
+        display: block !important;
     }
+
     .nav > li, .nav > li > a {
-    height: 40px;
+        height: 40px;
+    }
+}
+/* End of code from stackoverflow */
+
+
+@media (min-width: 768px) {
+    #offer-image {
+        width: 400px;
+        margin-right: 20px;
     }
 }
 
@@ -375,6 +381,12 @@ footer, .navbar {
     }
     #offer-article > p, .about-article > p {
         margin: 15px;
+    }
+    #request {
+        width: 100%;
+    }
+    #rooster {
+        display: none;
     }
 }
 
